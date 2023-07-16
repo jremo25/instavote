@@ -1,6 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  name: vote-deployment  
   creationTimestamp: null
   labels:
     app: vote
@@ -16,11 +17,12 @@ spec:
       creationTimestamp: null
       labels:
         app: vote
-        tier: front  
+        tier: front
     spec:
       containers:
       - image: schoolofdevops/vote:v1
         name: vote
         resources: {}
 status: {}
+
 
